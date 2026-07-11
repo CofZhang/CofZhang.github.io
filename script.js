@@ -1,36 +1,31 @@
-const root = document.documentElement;
-const toggle = document.querySelector(".theme-toggle");
-const themeIcon = document.querySelector(".theme-icon");
-const year = document.querySelector("#year");
-const projectGrid = document.querySelector("#project-grid");
+const yearNode = document.querySelector("#year");
+const navToggle = document.querySelector(".nav-toggle");
+const siteNav = document.querySelector("#site-nav");
+const repoGrid = document.querySelector("#project-grid");
 const repoStatus = document.querySelector("#repo-status");
+const repoCount = document.querySelector("#repo-count");
+const followerCount = document.querySelector("#follower-count");
+const profileUpdated = document.querySelector("#profile-updated");
 
-const storedTheme = localStorage.getItem("theme");
-const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-const initialTheme = storedTheme || (systemPrefersDark ? "dark" : "light");
+yearNode.textContent = new Date().getFullYear();
 
-function setTheme(theme) {
-  root.dataset.theme = theme;
-  themeIcon.textContent = theme === "dark" ? "☀" : "☾";
-  localStorage.setItem("theme", theme);
-}
-
-setTheme(initialTheme);
-year.textContent = new Date().getFullYear();
-
-toggle.addEventListener("click", () => {
-  setTheme(root.dataset.theme === "dark" ? "light" : "dark");
+navToggle.addEventListener("click", () => {
+  const isOpen = siteNav.classList.toggle("is-open");
+  navToggle.setAttribute("aria-expanded", String(isOpen));
 });
 
-const repoFormatter = new Intl.DateTimeFormat("zh-CN", {
+siteNav.addEventListener("click", (event) => {
+  if (event.target.matches("a")) {
+    siteNav.classList.remove("is-open");
+    navToggle.setAttribute("aria-expanded", "false");
+  }
+});
+
+const dateFormatter = new Intl.DateTimeFormat("zh-CN", {
   year: "numeric",
   month: "short",
   day: "numeric",
 });
-
-function fallbackDescription(repo) {
-  return repo.description || "GitHub 上的公开项目，可点击进入仓库查看代码、提交记录和最新更新。";
-}
 
 function escapeHtml(value) {
   return String(value)
@@ -41,32 +36,45 @@ function escapeHtml(value) {
     .replaceAll("'", "&#039;");
 }
 
+function formatNumber(value) {
+  return new Intl.NumberFormat("en", { notation: "compact" }).format(value);
+}
+
+function renderProfile(profile) {
+  repoCount.textContent = formatNumber(profile.public_repos ?? 0);
+  followerCount.textContent = formatNumber(profile.followers ?? 0);
+  profileUpdated.textContent = profile.updated_at
+    ? dateFormatter.format(new Date(profile.updated_at))
+    : "Live";
+}
+
+function fallbackDescription(repo) {
+  return repo.description || "公开项目仓库，可进入 GitHub 查看代码、提交记录和最新进展。";
+}
+
 function renderRepos(repos) {
-  const visibleRepos = repos
-    .filter((repo) => !repo.fork)
-    .slice(0, 6);
+  const visibleRepos = repos.filter((repo) => !repo.fork).slice(0, 5);
 
   if (!visibleRepos.length) {
-    repoStatus.textContent = "暂无可展示的公开仓库，请前往 GitHub 主页查看。";
+    repoStatus.textContent = "暂时没有可自动展示的公开仓库，已保留 GitHub 主页入口。";
     return;
   }
 
-  projectGrid.innerHTML = visibleRepos
-    .map((repo) => {
-      const language = repo.language || "Code";
-      const updated = repo.updated_at
-        ? repoFormatter.format(new Date(repo.updated_at))
-        : "Recently";
+  repoGrid.innerHTML = visibleRepos
+    .map((repo, index) => {
+      const language = repo.language || "Repository";
+      const updated = repo.updated_at ? dateFormatter.format(new Date(repo.updated_at)) : "Recently";
+      const featuredClass = index === 0 ? " project-card-featured" : "";
 
       return `
-        <article class="project-card">
+        <article class="project-card${featuredClass}">
           <div>
             <p class="project-kicker">${escapeHtml(language)}</p>
             <h3>${escapeHtml(repo.name)}</h3>
             <p>${escapeHtml(fallbackDescription(repo))}</p>
-            <div class="repo-meta" aria-label="Repository metadata">
+            <div class="repo-meta">
               <span>${escapeHtml(repo.stargazers_count)} stars</span>
-              <span>Updated ${escapeHtml(updated)}</span>
+              <span>${escapeHtml(updated)}</span>
             </div>
           </div>
           <a href="${escapeHtml(repo.html_url)}">打开仓库</a>
@@ -75,30 +83,37 @@ function renderRepos(repos) {
     })
     .join("");
 
-  repoStatus.textContent = `已展示 ${visibleRepos.length} 个最近更新的公开仓库。`;
+  repoStatus.textContent = `已同步 ${visibleRepos.length} 个最近更新的公开仓库。`;
 }
 
-async function loadRepos() {
+async function loadGitHubData() {
   try {
-    const response = await fetch(
-      "https://api.github.com/users/CofZhang/repos?sort=updated&per_page=8",
-      {
-        headers: {
-          Accept: "application/vnd.github+json",
-        },
-      },
-    );
+    const [profileResponse, repoResponse] = await Promise.all([
+      fetch("https://api.github.com/users/CofZhang", {
+        headers: { Accept: "application/vnd.github+json" },
+      }),
+      fetch("https://api.github.com/users/CofZhang/repos?sort=updated&per_page=8", {
+        headers: { Accept: "application/vnd.github+json" },
+      }),
+    ]);
 
-    if (!response.ok) {
-      throw new Error(`GitHub API returned ${response.status}`);
+    if (!profileResponse.ok || !repoResponse.ok) {
+      throw new Error("GitHub API unavailable");
     }
 
-    const repos = await response.json();
+    const [profile, repos] = await Promise.all([
+      profileResponse.json(),
+      repoResponse.json(),
+    ]);
+
+    renderProfile(profile);
     renderRepos(repos);
   } catch (error) {
-    repoStatus.textContent =
-      "暂时无法自动加载 GitHub 项目，已显示默认项目入口。";
+    repoCount.textContent = "GitHub";
+    followerCount.textContent = "Live";
+    profileUpdated.textContent = "Pages";
+    repoStatus.textContent = "GitHub API 暂时不可用，已显示默认项目入口。";
   }
 }
 
-loadRepos();
+loadGitHubData();
