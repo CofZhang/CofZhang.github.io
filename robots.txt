@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cofzhang.github.io/sitemap.xml

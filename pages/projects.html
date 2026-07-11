@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="张浩哲的项目经历，包含 Livox MID360 + FAST-LIO2、数字孪生加工系统、STM32 工业控制板和 MuJoCo 机器人仿真。"
+    />
+    <title>项目 | Haozhe Zhang</title>
+    <link rel="stylesheet" href="../assets/css/site.css" />
+  </head>
+  <body data-page="projects">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="Haozhe Zhang home">
+        <span class="brand-mark">HZ</span>
+        <span>
+          <strong>Haozhe Zhang</strong>
+          <small>Mechanical Engineer · Robotics</small>
+        </span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-label="打开导航" data-nav-toggle>
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" aria-label="主导航" data-site-nav>
+        <a href="../index.html" data-nav-id="home">首页</a>
+        <a href="about.html" data-nav-id="about">关于</a>
+        <a href="skills.html" data-nav-id="skills">技能</a>
+        <a href="projects.html" data-nav-id="projects">项目</a>
+        <a href="resume.html" data-nav-id="resume">简历</a>
+        <a href="contact.html" data-nav-id="contact">联系</a>
+      </nav>
+      <a class="header-action" href="resume.html">查看简历</a>
+    </header>
+
+    <main id="main">
+      <section class="page-hero">
+        <div>
+          <p class="eyebrow">Projects</p>
+          <h1>项目经历</h1>
+          <p>
+            这些项目覆盖机器人感知、智能制造、嵌入式控制和机器人仿真，重点展示系统部署与工程整合能力。
+          </p>
+        </div>
+        <aside class="page-meta">
+          <div>
+            <span>Repository</span>
+            <strong><a href="https://github.com/CofZhang">github.com/CofZhang</a></strong>
+          </div>
+          <div>
+            <span>Focus</span>
+            <strong>Robotics, Digital Twin, Embedded Control</strong>
+          </div>
+        </aside>
+      </section>
+
+      <section class="section">
+        <div class="case-grid">
+          <article class="case-study">
+            <div>
+              <p class="project-type">Robotics Perception</p>
+              <h3>Livox MID360 + FAST-LIO2 部署</h3>
+              <p>
+                完成从 LiDAR 设备、SDK、ROS2 驱动到 FAST-LIO2 建图的端到端部署，
+                重点解决依赖、编译、通信、显示和 Docker 环境问题。
+              </p>
+              <ul>
+                <li>Ubuntu 环境搭建与 Docker 部署</li>
+                <li>ROS2 Foxy、Livox SDK2、livox_ros_driver2</li>
+                <li>FAST-LIO2、RViz、Point Cloud、Mapping</li>
+                <li>PCL、IKD-Tree、TF、Odometry 链路调试</li>
+              </ul>
+            </div>
+            <ul class="tag-list">
+              <li>ROS2</li><li>LiDAR</li><li>SLAM</li><li>FAST-LIO2</li>
+            </ul>
+          </article>
+          <article class="case-study">
+            <div>
+              <p class="project-type">Research Architecture</p>
+              <h3>数字孪生加工系统</h3>
+              <p>
+                围绕薄壁叶片加工建立数字孪生系统方案，连接物理空间、网络空间、
+                决策层、传感层和在线优化控制。
+              </p>
+              <ul>
+                <li>Digital Twin Architecture</li>
+                <li>Physical Space, Cyber Space, Decision Layer</li>
+                <li>Sensor Layer, Tool Wear Model, Adaptive Control</li>
+                <li>Online Optimization and Process Monitoring</li>
+              </ul>
+            </div>
+            <ul class="tag-list">
+              <li>Digital Twin</li><li>Tool Wear</li><li>Manufacturing AI</li>
+            </ul>
+          </article>
+          <article class="case-study">
+            <div>
+              <p class="project-type">Embedded Systems</p>
+              <h3>STM32 工业控制板</h3>
+              <p>
+                围绕工业控制板进行外设配置、通信协议和多 MCU 协同开发，
+                覆盖从硬件接口到 HAL 驱动的工程实践。
+              </p>
+              <ul>
+                <li>STM32H743、STM32H723、STM32G474</li>
+                <li>USB HS、ULPI、USB3320 PHY</li>
+                <li>FDCAN、CAN、SPI、Ethernet</li>
+                <li>CubeMX 配置与 HAL 驱动开发</li>
+              </ul>
+            </div>
+            <ul class="tag-list">
+              <li>STM32</li><li>FDCAN</li><li>USB HS</li><li>HAL</li>
+            </ul>
+          </article>
+          <article class="case-study">
+            <div>
+              <p class="project-type">Robot Simulation</p>
+              <h3>MuJoCo 机器人仿真</h3>
+              <p>
+                学习机器人仿真、物理引擎、插件系统和强化学习基础，
+                目标是将 Robot Learning 与制造业应用结合。
+              </p>
+              <ul>
+                <li>Robot Simulation and Physics Engine</li>
+                <li>Plugin, Model, Environment Setup</li>
+                <li>Sim2Real Thinking</li>
+                <li>Reinforcement Learning Pipeline</li>
+              </ul>
+            </div>
+            <ul class="tag-list">
+              <li>MuJoCo</li><li>Simulation</li><li>PPO</li><li>Sim2Real</li>
+            </ul>
+          </article>
+          <article class="case-study">
+            <div>
+              <p class="project-type">Engineering Website</p>
+              <h3>个人品牌与简历官网</h3>
+              <p>
+                使用 GitHub Pages 构建多页面个人官网，用于展示教育背景、技术栈、
+                项目经历、研究方向和联系方式。
+              </p>
+              <ul>
+                <li>Pure Static Website on GitHub Pages</li>
+                <li>Responsive Multi-page Information Architecture</li>
+                <li>Resume-oriented Content Design</li>
+                <li>SEO and Print-friendly Resume Page</li>
+              </ul>
+            </div>
+            <ul class="tag-list">
+              <li>HTML</li><li>CSS</li><li>JavaScript</li><li>GitHub Pages</li>
+            </ul>
+          </article>
+          <article class="case-study">
+            <div>
+              <p class="project-type">Next Portfolio Target</p>
+              <h3>高质量开源工程项目</h3>
+              <p>
+                下一阶段重点建设可公开复现的机器人和智能制造项目，
+                强化代码质量、系统设计、算法深度和英文技术表达。
+              </p>
+              <ul>
+                <li>State Estimation, SLAM, Motion Planning</li>
+                <li>Control and Reinforcement Learning</li>
+                <li>Perception, Planning, Control to Deployment</li>
+                <li>Technical Blog and Open-source Contribution</li>
+              </ul>
+            </div>
+            <ul class="tag-list">
+              <li>Open Source</li><li>Robotics</li><li>Systems</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="cta-section">
+        <div>
+          <p class="eyebrow">GitHub</p>
+          <h2>更多公开项目会持续沉淀到 GitHub。</h2>
+          <p>当前官网已经连接你的 GitHub 主页，后续可以继续添加项目详情页和技术博客。</p>
+        </div>
+        <div class="cta-actions">
+          <a class="button button-primary" href="https://github.com/CofZhang">打开 GitHub</a>
+          <a class="button button-secondary" href="resume.html">查看简历</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span data-year></span> Haozhe Zhang. Built on GitHub Pages.</p>
+      <div>
+        <a href="https://github.com/CofZhang">GitHub</a>
+        <a href="mailto:haozhez0812@gmail">Email</a>
+      </div>
+    </footer>
+    <script src="../assets/js/site.js"></script>
+  </body>
+</html>
