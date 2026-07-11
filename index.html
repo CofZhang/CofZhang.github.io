@@ -1,1 +1,157 @@
-<p> hello
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="CofZhang 的个人网站，展示个人简介、项目作品和联系方式。"
+    />
+    <meta name="theme-color" content="#0f172a" />
+    <meta property="og:title" content="CofZhang | Personal Website" />
+    <meta
+      property="og:description"
+      content="Personal website for CofZhang, featuring GitHub projects and contact links."
+    />
+    <meta property="og:type" content="website" />
+    <title>CofZhang | Personal Website</title>
+    <link rel="preconnect" href="https://github.com" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Back to top">
+        <span class="brand-mark">CZ</span>
+        <span>CofZhang</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#about">关于</a>
+        <a href="#work">项目</a>
+        <a href="#contact">联系</a>
+      </nav>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme">
+        <span class="theme-icon" aria-hidden="true">☾</span>
+      </button>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-media" aria-hidden="true">
+          <img
+            src="https://github.com/CofZhang.png?size=520"
+            alt=""
+            width="520"
+            height="520"
+          />
+        </div>
+        <div class="hero-copy">
+          <p class="eyebrow">GitHub Pages · Personal Portfolio</p>
+          <h1 id="hero-title">CofZhang</h1>
+          <p class="hero-lede">
+            一个面向代码、探索和长期积累的个人网站。这里汇集我的 GitHub
+            项目、技术轨迹和公开联系方式。
+          </p>
+          <div class="hero-actions" aria-label="Primary actions">
+            <a class="button button-primary" href="https://github.com/CofZhang">
+              GitHub 主页
+            </a>
+            <a class="button button-secondary" href="mailto:haozhez0812@gmail">
+              发送邮件
+            </a>
+          </div>
+        </div>
+        <aside class="hero-panel" aria-label="Profile highlights">
+          <dl>
+            <div>
+              <dt>GitHub</dt>
+              <dd>@CofZhang</dd>
+            </div>
+            <div>
+              <dt>Email</dt>
+              <dd>haozhez0812@gmail</dd>
+            </div>
+            <div>
+              <dt>Focus</dt>
+              <dd>Software · Research · Build</dd>
+            </div>
+          </dl>
+        </aside>
+      </section>
+
+      <section class="section" id="about" aria-labelledby="about-title">
+        <div class="section-heading">
+          <p class="eyebrow">About</p>
+          <h2 id="about-title">关于我</h2>
+        </div>
+        <div class="about-grid">
+          <p>
+            我关注把想法变成可以运行、可以复用、可以持续迭代的作品。这个站点作为个人主页，
+            会优先承载项目展示、学习记录和外部联系入口。
+          </p>
+          <p>
+            你可以从下方项目区进入我的 GitHub 仓库，也可以通过邮件联系我。后续只需要更新
+            GitHub 项目或替换页面文字，这个站点就能继续作为个人名片使用。
+          </p>
+        </div>
+      </section>
+
+      <section class="section work-section" id="work" aria-labelledby="work-title">
+        <div class="section-heading">
+          <p class="eyebrow">Selected Work</p>
+          <h2 id="work-title">GitHub 项目</h2>
+        </div>
+        <div class="project-toolbar">
+          <p id="repo-status">正在从 GitHub 加载最近更新的公开仓库...</p>
+          <a href="https://github.com/CofZhang?tab=repositories">查看全部仓库</a>
+        </div>
+        <div class="project-grid" id="project-grid" aria-live="polite">
+          <article class="project-card">
+            <div>
+              <p class="project-kicker">Website</p>
+              <h3>CofZhang.github.io</h3>
+              <p>
+                这个个人主页本身也是一个 GitHub Pages 项目，可继续扩展为作品集、博客或简历站。
+              </p>
+            </div>
+            <a href="https://github.com/CofZhang/CofZhang.github.io">打开仓库</a>
+          </article>
+          <article class="project-card">
+            <div>
+              <p class="project-kicker">GitHub</p>
+              <h3>Public Repositories</h3>
+              <p>
+                如果浏览器可以访问 GitHub API，这里会自动替换成最近更新的公开项目列表。
+              </p>
+            </div>
+            <a href="https://github.com/CofZhang">进入主页</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contact" aria-labelledby="contact-title">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-title">保持联系</h2>
+          <p>
+            欢迎通过 GitHub 查看项目动态，或发送邮件交流合作、学习和技术相关话题。
+          </p>
+        </div>
+        <div class="contact-actions">
+          <a class="button button-primary" href="https://github.com/CofZhang">
+            github.com/CofZhang
+          </a>
+          <a class="button button-secondary" href="mailto:haozhez0812@gmail">
+            haozhez0812@gmail
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="year"></span> CofZhang. Built with GitHub Pages.</p>
+      <a href="#top">返回顶部</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
