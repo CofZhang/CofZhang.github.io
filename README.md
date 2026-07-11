@@ -1,6 +1,6 @@
-# Haozhe Zhang Personal Website
+# 张同学 Personal Website
 
-Personal website and online resume for Haozhe Zhang, hosted with GitHub Pages.
+Personal website and online resume for 张同学, hosted with GitHub Pages.
 
 ## Structure
 
