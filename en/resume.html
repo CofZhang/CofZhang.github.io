@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Online resume for Zhang, covering education, research areas, technical stack, projects, and career goals." />
+    <title>Resume | Zhang</title>
+    <link rel="stylesheet" href="../assets/css/site.css" />
+  </head>
+  <body data-page="resume">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Zhang home">
+        <span class="brand-mark">Z</span>
+        <span>
+          <strong>Zhang</strong>
+          <small>Mechanical Engineering · Robotics</small>
+        </span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open navigation" data-nav-toggle>
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" aria-label="Primary navigation" data-site-nav>
+        <a href="index.html" data-nav-id="home">Home</a>
+        <a href="about.html" data-nav-id="about">About</a>
+        <a href="skills.html" data-nav-id="skills">Skills</a>
+        <a href="projects.html" data-nav-id="projects">Projects</a>
+        <a href="resume.html" data-nav-id="resume">Resume</a>
+        <a href="contact.html" data-nav-id="contact">Contact</a>
+      </nav>
+      <div class="header-tools">
+        <div class="language-switch" aria-label="Language switch">
+          <a href="../pages/resume.html">ZH</a>
+          <a class="is-active" href="resume.html">EN</a>
+        </div>
+        <a class="header-action" href="contact.html">Contact</a>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="page-hero">
+        <div>
+          <p class="eyebrow">Resume</p>
+          <h1>Online Resume</h1>
+          <p>
+            A recruiter-oriented summary of education, research interests, technical stack,
+            projects, and career direction.
+          </p>
+          <div class="inline-actions">
+            <button class="button button-primary" type="button" data-print>Print or Save PDF</button>
+            <a class="button button-secondary" href="https://github.com/CofZhang">GitHub Profile</a>
+          </div>
+        </div>
+        <aside class="page-meta">
+          <div>
+            <span>Name</span>
+            <strong>Zhang</strong>
+          </div>
+          <div>
+            <span>Email</span>
+            <strong><a href="mailto:haozhez0812@gmail">haozhez0812@gmail</a></strong>
+          </div>
+        </aside>
+      </section>
+
+      <section class="section">
+        <div class="resume-layout">
+          <aside class="resume-sidebar">
+            <article class="resume-card">
+              <h2>Profile</h2>
+              <p>
+                Mechanical engineering background focused on robotics, perception,
+                quadruped reinforcement learning, embedded systems, and AI for Robotics.
+              </p>
+              <ul class="compact-list">
+                <li>Robotics</li>
+                <li>Perception</li>
+                <li>Quadruped RL</li>
+                <li>Embedded</li>
+                <li>Linux</li>
+              </ul>
+            </article>
+            <article class="resume-card">
+              <h2>Contact</h2>
+              <p><strong>GitHub</strong><br /><a href="https://github.com/CofZhang">github.com/CofZhang</a></p>
+              <p><strong>Email</strong><br /><a href="mailto:haozhez0812@gmail">haozhez0812@gmail</a></p>
+            </article>
+            <article class="resume-card">
+              <h2>Programming</h2>
+              <ul class="compact-list">
+                <li>C++</li><li>C</li><li>Python</li><li>Shell</li>
+                <li>YAML</li><li>JSON</li><li>ROS2 Launch</li>
+              </ul>
+            </article>
+          </aside>
+
+          <div class="resume-main">
+            <section class="resume-block">
+              <h2>Education</h2>
+              <h3>Xi'an Jiaotong University</h3>
+              <p>Master of Mechanical Engineering</p>
+              <ul>
+                <li>Research interests: robotics, quadruped robot learning, reinforcement learning</li>
+                <li>Sim2Real, robot perception, autonomous systems</li>
+              </ul>
+              <h3>Wuhan University</h3>
+              <p>Bachelor of Mechanical Engineering</p>
+            </section>
+
+            <section class="resume-block">
+              <h2>Research Areas</h2>
+              <ul>
+                <li><strong>Robotics:</strong> robot control, motion planning, reinforcement learning, Sim2Real, robot perception</li>
+                <li><strong>Quadruped Reinforcement Learning:</strong> quadruped locomotion, PPO, reward design, simulation pipelines, Sim2Real</li>
+                <li><strong>Machine Vision and Perception:</strong> Livox MID360, FAST-LIO, SLAM, point clouds, ROS2, RViz, PCL, ICP, IKD-Tree</li>
+                <li><strong>Embedded Systems:</strong> STM32H743, STM32H723, STM32G474, CubeMX, HAL, USB HS, FDCAN, SPI, Ethernet</li>
+                <li><strong>Linux Development:</strong> Ubuntu, Docker, Git, CMake, Colcon, workspace management, driver debugging</li>
+              </ul>
+            </section>
+
+            <section class="resume-block">
+              <h2>Projects</h2>
+              <h3>Livox MID360 + FAST-LIO2 Deployment</h3>
+              <p>
+                Built and debugged a LiDAR SLAM pipeline with Ubuntu, Docker, ROS2 Foxy,
+                Livox SDK2, livox_ros_driver2, FAST-LIO2, and RViz, covering point cloud
+                visualization, odometry, and mapping.
+              </p>
+              <h3>Quadruped Robot Reinforcement Learning Project</h3>
+              <p>
+                Built a learning-oriented quadruped reinforcement learning project around
+                locomotion, PPO training, reward design, simulation environments, gait
+                learning, and Sim2Real transfer awareness.
+              </p>
+              <h3>STM32 Industrial Control Board</h3>
+              <p>
+                Worked with USB HS, USB3320 PHY, FDCAN, SPI, multi-MCU communication,
+                CubeMX configuration, and HAL-based embedded development.
+              </p>
+              <h3>MuJoCo Robot Simulation</h3>
+              <p>
+                Studied robot simulation, plugin mechanisms, physics engines, Sim2Real,
+                and reinforcement learning workflows.
+              </p>
+            </section>
+
+            <section class="resume-block">
+              <h2>Software and Tools</h2>
+              <ul class="compact-list">
+                <li>Linux</li><li>Ubuntu</li><li>Docker</li><li>ROS2</li><li>RViz</li>
+                <li>Gazebo</li><li>MuJoCo</li><li>Isaac Lab</li><li>MATLAB</li>
+                <li>Keil</li><li>STM32CubeMX</li><li>Git</li><li>CMake</li><li>Colcon</li>
+              </ul>
+            </section>
+
+            <section class="resume-block">
+              <h2>Career Target</h2>
+              <p>
+                Target directions include robotics, autonomous systems, embodied intelligence,
+                AI Robotics, industrial embedded systems, and robotics software engineering.
+                The long-term direction is to combine robot learning, reinforcement learning,
+                and real robot deployment.
+              </p>
+            </section>
+
+            <section class="resume-block">
+              <h2>Current Growth Roadmap</h2>
+              <ul>
+                <li>Build high-quality public GitHub projects with clear code quality and reproducibility.</li>
+                <li>Deepen core algorithms in state estimation, SLAM, motion planning, control, and reinforcement learning.</li>
+                <li>Strengthen full robot system experience from perception and planning to control and deployment.</li>
+                <li>Improve English technical writing, project documentation, and interview communication.</li>
+                <li>Contribute to open-source robotics projects and build verifiable public work.</li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span data-year></span> Zhang. Built on GitHub Pages.</p>
+      <div>
+        <a href="https://github.com/CofZhang">GitHub</a>
+        <a href="mailto:haozhez0812@gmail">Email</a>
+      </div>
+    </footer>
+    <script src="../assets/js/site.js"></script>
+  </body>
+</html>

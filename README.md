@@ -10,6 +10,7 @@ Personal website and online resume for 张同学, hosted with GitHub Pages.
 - `pages/projects.html`: project case studies
 - `pages/resume.html`: interview-oriented online resume with print support
 - `pages/contact.html`: contact and career direction
+- `en/`: English version of the website
 - `assets/css/site.css`: shared responsive design system
 - `assets/js/site.js`: navigation, print and email copy interactions
 

@@ -11,13 +11,13 @@
     <link rel="stylesheet" href="../assets/css/site.css" />
   </head>
   <body data-page="resume">
-    <a class="skip-link" href="#main">Skip to content</a>
+    <a class="skip-link" href="#main">跳到正文</a>
     <header class="site-header">
       <a class="brand" href="../index.html" aria-label="张同学 home">
         <span class="brand-mark">张</span>
         <span>
           <strong>张同学</strong>
-          <small>Mechanical Engineer · Robotics</small>
+          <small>机械工程 · 机器人</small>
         </span>
       </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-label="打开导航" data-nav-toggle>
@@ -31,13 +31,19 @@
         <a href="resume.html" data-nav-id="resume">简历</a>
         <a href="contact.html" data-nav-id="contact">联系</a>
       </nav>
-      <a class="header-action" href="contact.html">联系我</a>
+      <div class="header-tools">
+        <div class="language-switch" aria-label="语言切换">
+          <a class="is-active" href="resume.html">中文</a>
+          <a href="../en/resume.html">EN</a>
+        </div>
+        <a class="header-action" href="contact.html">联系我</a>
+      </div>
     </header>
 
     <main id="main">
       <section class="page-hero">
         <div>
-          <p class="eyebrow">Resume</p>
+          <p class="eyebrow">在线简历</p>
           <h1>在线简历</h1>
           <p>
             这一页面向面试官快速阅读，突出教育背景、研究方向、技能栈、项目经历和职业目标。
@@ -49,11 +55,11 @@
         </div>
         <aside class="page-meta">
           <div>
-            <span>Name</span>
+            <span>姓名</span>
             <strong>张同学</strong>
           </div>
           <div>
-            <span>Email</span>
+            <span>邮箱</span>
             <strong><a href="mailto:haozhez0812@gmail">haozhez0812@gmail</a></strong>
           </div>
         </aside>
@@ -63,26 +69,26 @@
         <div class="resume-layout">
           <aside class="resume-sidebar">
             <article class="resume-card">
-              <h2>Profile</h2>
+              <h2>个人简介</h2>
               <p>
-                Mechanical Engineer focused on robotics, perception, digital twin,
-                embedded systems and AI for manufacturing.
+                机械工程背景，关注机器人、感知、四足机器人强化学习、
+                嵌入式系统和 AI for Robotics。
               </p>
               <ul class="compact-list">
-                <li>Robotics</li>
-                <li>Perception</li>
-                <li>Quadruped RL</li>
-                <li>Embedded</li>
+                <li>机器人</li>
+                <li>感知</li>
+                <li>四足强化学习</li>
+                <li>嵌入式</li>
                 <li>Linux</li>
               </ul>
             </article>
             <article class="resume-card">
-              <h2>Contact</h2>
+              <h2>联系方式</h2>
               <p><strong>GitHub</strong><br /><a href="https://github.com/CofZhang">github.com/CofZhang</a></p>
-              <p><strong>Email</strong><br /><a href="mailto:haozhez0812@gmail">haozhez0812@gmail</a></p>
+              <p><strong>邮箱</strong><br /><a href="mailto:haozhez0812@gmail">haozhez0812@gmail</a></p>
             </article>
             <article class="resume-card">
-              <h2>Programming</h2>
+              <h2>编程语言</h2>
               <ul class="compact-list">
                 <li>C++</li><li>C</li><li>Python</li><li>Shell</li>
                 <li>YAML</li><li>JSON</li><li>ROS2 Launch</li>
@@ -92,56 +98,54 @@
 
           <div class="resume-main">
             <section class="resume-block">
-              <h2>Education</h2>
-              <h3>Xi'an Jiaotong University</h3>
-              <p>Master of Mechanical Engineering</p>
+              <h2>教育背景</h2>
+              <h3>西安交通大学</h3>
+              <p>机械工程硕士</p>
               <ul>
-                <li>Research Interests: Robotics, Quadruped Robot Learning, Reinforcement Learning</li>
-                <li>Sim2Real, Robot Perception, Autonomous Systems</li>
+                <li>研究兴趣：机器人、四足机器人学习、强化学习</li>
+                <li>Sim2Real、机器人感知、自主系统</li>
               </ul>
-              <h3>Wuhan University</h3>
-              <p>Bachelor of Mechanical Engineering</p>
+              <h3>武汉大学</h3>
+              <p>机械工程本科</p>
             </section>
 
             <section class="resume-block">
-              <h2>Research Areas</h2>
+              <h2>研究方向</h2>
               <ul>
-                <li><strong>Robotics:</strong> Robot Control, Motion Planning, Reinforcement Learning, Sim2Real, Robot Perception</li>
-                <li><strong>Quadruped Reinforcement Learning:</strong> Quadruped Locomotion, PPO, Reward Design, Simulation Pipeline, Sim2Real</li>
-                <li><strong>Machine Vision and Perception:</strong> Livox MID360, FAST-LIO, SLAM, Point Cloud, ROS2, RViz, PCL, ICP, IKD-Tree</li>
-                <li><strong>Embedded Systems:</strong> STM32H743, STM32H723, STM32G474, CubeMX, HAL, USB HS, FDCAN, SPI, Ethernet</li>
-                <li><strong>Linux Development:</strong> Ubuntu, Docker, Git, CMake, Colcon, Workspace Management, Driver Debugging</li>
+                <li><strong>机器人：</strong>机器人控制、运动规划、强化学习、Sim2Real、机器人感知</li>
+                <li><strong>四足机器人强化学习：</strong>四足运动控制、PPO、奖励设计、仿真流程、Sim2Real</li>
+                <li><strong>机器视觉与感知：</strong>Livox MID360、FAST-LIO、SLAM、点云、ROS2、RViz、PCL、ICP、IKD-Tree</li>
+                <li><strong>嵌入式系统：</strong>STM32H743、STM32H723、STM32G474、CubeMX、HAL、USB HS、FDCAN、SPI、Ethernet</li>
+                <li><strong>Linux 开发：</strong>Ubuntu、Docker、Git、CMake、Colcon、工作空间管理、驱动调试</li>
               </ul>
             </section>
 
             <section class="resume-block">
-              <h2>Projects</h2>
-              <h3>Livox MID360 + FAST-LIO2 Deployment</h3>
+              <h2>项目经历</h2>
+              <h3>Livox MID360 + FAST-LIO2 部署</h3>
               <p>
-                Built and debugged a LiDAR-based SLAM pipeline with Ubuntu, Docker,
-                ROS2 Foxy, Livox SDK2, livox_ros_driver2, FAST-LIO2, RViz, point cloud
-                visualization, odometry and mapping.
+                基于 Ubuntu、Docker、ROS2 Foxy、Livox SDK2、livox_ros_driver2、
+                FAST-LIO2 和 RViz，搭建并调试 LiDAR SLAM 流程，覆盖点云可视化、
+                里程计和建图。
               </p>
-              <h3>Quadruped Robot Reinforcement Learning Project</h3>
+              <h3>四足机器人强化学习项目</h3>
               <p>
-                Built a learning-oriented quadruped robot reinforcement learning project
-                around locomotion, PPO training, reward design, simulation environments,
-                gait learning and Sim2Real transfer awareness.
+                围绕四足机器人运动控制搭建强化学习项目，关注 locomotion、PPO 训练、
+                奖励设计、仿真环境、步态学习和 Sim2Real 迁移意识。
               </p>
-              <h3>STM32 Industrial Control Board</h3>
+              <h3>STM32 工业控制板</h3>
               <p>
-                Worked on USB HS, USB3320 PHY, FDCAN, SPI, multi-MCU communication,
-                CubeMX configuration and HAL-based embedded development.
+                接触 USB HS、USB3320 PHY、FDCAN、SPI、多 MCU 通信、
+                CubeMX 配置和基于 HAL 的嵌入式开发。
               </p>
-              <h3>MuJoCo Robot Simulation</h3>
+              <h3>MuJoCo 机器人仿真</h3>
               <p>
-                Studied robot simulation, plugins, physics engine, Sim2Real and
-                reinforcement learning workflows.
+                学习机器人仿真、插件机制、物理引擎、Sim2Real 和强化学习工作流。
               </p>
             </section>
 
             <section class="resume-block">
-              <h2>Software and Tools</h2>
+              <h2>软件与工具</h2>
               <ul class="compact-list">
                 <li>Linux</li><li>Ubuntu</li><li>Docker</li><li>ROS2</li><li>RViz</li>
                 <li>Gazebo</li><li>MuJoCo</li><li>Isaac Lab</li><li>MATLAB</li>
@@ -150,22 +154,21 @@
             </section>
 
             <section class="resume-block">
-              <h2>Career Target</h2>
+              <h2>职业目标</h2>
               <p>
-                Target roles in robotics, autonomous systems, industrial AI, intelligent
-                manufacturing, embodied intelligence and AI robotics. Long-term direction:
-                combine robot learning, reinforcement learning and manufacturing systems.
+                目标方向包括机器人、自主系统、具身智能、AI Robotics、工业嵌入式和机器人软件工程。
+                长期方向是结合机器人学习、强化学习和真实机器人系统部署。
               </p>
             </section>
 
             <section class="resume-block">
-              <h2>Current Growth Roadmap</h2>
+              <h2>当前补强路线</h2>
               <ul>
-                <li>Build high-quality public GitHub projects with clear code quality and reproducibility.</li>
-                <li>Deepen core algorithms in state estimation, SLAM, motion planning, control and reinforcement learning.</li>
-                <li>Strengthen full robot system design from perception and planning to control and deployment.</li>
-                <li>Improve English technical writing, project documentation and interview communication.</li>
-                <li>Contribute to open-source robotics or intelligent manufacturing projects.</li>
+                <li>建设高质量公开 GitHub 项目，体现代码质量和可复现能力。</li>
+                <li>加强状态估计、SLAM、运动规划、控制和强化学习等核心算法。</li>
+                <li>形成从感知、规划、控制到部署的完整机器人系统经验。</li>
+                <li>提升英文技术写作、项目文档和面试沟通能力。</li>
+                <li>参与机器人方向开源项目，积累可验证的公开贡献。</li>
               </ul>
             </section>
           </div>
@@ -174,10 +177,10 @@
     </main>
 
     <footer class="site-footer">
-      <p>© <span data-year></span> 张同学. Built on GitHub Pages.</p>
+      <p>© <span data-year></span> 张同学。基于 GitHub Pages 构建。</p>
       <div>
         <a href="https://github.com/CofZhang">GitHub</a>
-        <a href="mailto:haozhez0812@gmail">Email</a>
+        <a href="mailto:haozhez0812@gmail">邮箱</a>
       </div>
     </footer>
     <script src="../assets/js/site.js"></script>

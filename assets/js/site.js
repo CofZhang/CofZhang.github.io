@@ -33,11 +33,13 @@ document.querySelectorAll("[data-print]").forEach((button) => {
 document.querySelectorAll("[data-copy-email]").forEach((button) => {
   button.addEventListener("click", async () => {
     const email = button.dataset.copyEmail;
+    const defaultLabel = button.dataset.copyLabel || button.textContent;
+    const doneLabel = button.dataset.copyDone || "Copied";
     try {
       await navigator.clipboard.writeText(email);
-      button.textContent = "已复制邮箱";
+      button.textContent = doneLabel;
       setTimeout(() => {
-        button.textContent = "复制邮箱";
+        button.textContent = defaultLabel;
       }, 1800);
     } catch (error) {
       window.location.href = `mailto:${email}`;

@@ -11,13 +11,13 @@
     <link rel="stylesheet" href="../assets/css/site.css" />
   </head>
   <body data-page="contact">
-    <a class="skip-link" href="#main">Skip to content</a>
+    <a class="skip-link" href="#main">跳到正文</a>
     <header class="site-header">
       <a class="brand" href="../index.html" aria-label="张同学 home">
         <span class="brand-mark">张</span>
         <span>
           <strong>张同学</strong>
-          <small>Mechanical Engineer · Robotics</small>
+          <small>机械工程 · 机器人</small>
         </span>
       </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-label="打开导航" data-nav-toggle>
@@ -31,13 +31,19 @@
         <a href="resume.html" data-nav-id="resume">简历</a>
         <a href="contact.html" data-nav-id="contact">联系</a>
       </nav>
-      <a class="header-action" href="resume.html">查看简历</a>
+      <div class="header-tools">
+        <div class="language-switch" aria-label="语言切换">
+          <a class="is-active" href="contact.html">中文</a>
+          <a href="../en/contact.html">EN</a>
+        </div>
+        <a class="header-action" href="resume.html">查看简历</a>
+      </div>
     </header>
 
     <main id="main">
       <section class="page-hero">
         <div>
-          <p class="eyebrow">Contact</p>
+          <p class="eyebrow">联系</p>
           <h1>联系我</h1>
           <p>
             欢迎围绕机器人、四足机器人强化学习、嵌入式系统和 AI for Robotics 交流。
@@ -49,7 +55,7 @@
             <strong><a href="https://github.com/CofZhang">github.com/CofZhang</a></strong>
           </div>
           <div>
-            <span>Email</span>
+            <span>邮箱</span>
             <strong><a href="mailto:haozhez0812@gmail">haozhez0812@gmail</a></strong>
           </div>
         </aside>
@@ -58,26 +64,34 @@
       <section class="section">
         <div class="contact-grid">
           <article class="contact-panel">
-            <p class="eyebrow">For Recruiters and Collaborators</p>
+            <p class="eyebrow">给招聘方和合作者</p>
             <h2>我关注的岗位和合作方向</h2>
             <ul class="detail-list">
-              <li>Robotics Software Engineer</li>
-              <li>Embodied Intelligence and Robot Learning</li>
-              <li>Quadruped Reinforcement Learning and Robot Simulation</li>
-              <li>Robot Learning and Sim2Real</li>
-              <li>Embedded Systems and Industrial Control</li>
-              <li>Perception, SLAM and Sensor Integration</li>
+              <li>机器人软件工程师</li>
+              <li>具身智能与机器人学习</li>
+              <li>四足机器人强化学习与机器人仿真</li>
+              <li>机器人学习与 Sim2Real</li>
+              <li>嵌入式系统与工业控制</li>
+              <li>感知、SLAM 与传感器集成</li>
             </ul>
             <div class="inline-actions">
               <a class="button button-primary" href="mailto:haozhez0812@gmail">发送邮件</a>
-              <button class="button button-secondary" type="button" data-copy-email="haozhez0812@gmail">复制邮箱</button>
+              <button
+                class="button button-secondary"
+                type="button"
+                data-copy-email="haozhez0812@gmail"
+                data-copy-label="复制邮箱"
+                data-copy-done="已复制邮箱"
+              >
+                复制邮箱
+              </button>
             </div>
           </article>
           <aside class="contact-panel">
-            <p class="detail-label">Links</p>
+            <p class="detail-label">链接</p>
             <h3>公开入口</h3>
             <p><strong>GitHub</strong><br /><a href="https://github.com/CofZhang">https://github.com/CofZhang</a></p>
-            <p><strong>Email</strong><br /><a href="mailto:haozhez0812@gmail">haozhez0812@gmail</a></p>
+            <p><strong>邮箱</strong><br /><a href="mailto:haozhez0812@gmail">haozhez0812@gmail</a></p>
             <p class="footer-note">
               当前网站托管在 GitHub Pages，可作为简历、作品集和项目展示入口长期维护。
             </p>
@@ -88,7 +102,7 @@
       <section class="section section-contrast">
         <div class="section-header">
           <div>
-            <p class="eyebrow">Future Direction</p>
+            <p class="eyebrow">长期方向</p>
             <h2>长期方向</h2>
           </div>
           <p>
@@ -98,15 +112,15 @@
         </div>
         <div class="research-list">
           <article>
-            <h3>Robotics Companies</h3>
+            <h3>机器人公司</h3>
             <p>机器人、自动驾驶、具身智能、移动操作和工业机器人方向。</p>
           </article>
           <article>
-            <h3>Industrial Automation</h3>
+            <h3>工业自动化</h3>
             <p>四足机器人强化学习、机器人仿真、工业控制和 AI for Robotics 方向。</p>
           </article>
           <article>
-            <h3>Computing and Systems</h3>
+            <h3>计算与系统</h3>
             <p>高性能计算、嵌入式系统、边缘计算和机器人系统基础设施方向。</p>
           </article>
         </div>
@@ -114,10 +128,10 @@
     </main>
 
     <footer class="site-footer">
-      <p>© <span data-year></span> 张同学. Built on GitHub Pages.</p>
+      <p>© <span data-year></span> 张同学。基于 GitHub Pages 构建。</p>
       <div>
         <a href="https://github.com/CofZhang">GitHub</a>
-        <a href="mailto:haozhez0812@gmail">Email</a>
+        <a href="mailto:haozhez0812@gmail">邮箱</a>
       </div>
     </footer>
     <script src="../assets/js/site.js"></script>

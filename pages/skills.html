@@ -11,13 +11,13 @@
     <link rel="stylesheet" href="../assets/css/site.css" />
   </head>
   <body data-page="skills">
-    <a class="skip-link" href="#main">Skip to content</a>
+    <a class="skip-link" href="#main">跳到正文</a>
     <header class="site-header">
       <a class="brand" href="../index.html" aria-label="张同学 home">
         <span class="brand-mark">张</span>
         <span>
           <strong>张同学</strong>
-          <small>Mechanical Engineer · Robotics</small>
+          <small>机械工程 · 机器人</small>
         </span>
       </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-label="打开导航" data-nav-toggle>
@@ -31,13 +31,19 @@
         <a href="resume.html" data-nav-id="resume">简历</a>
         <a href="contact.html" data-nav-id="contact">联系</a>
       </nav>
-      <a class="header-action" href="resume.html">查看简历</a>
+      <div class="header-tools">
+        <div class="language-switch" aria-label="语言切换">
+          <a class="is-active" href="skills.html">中文</a>
+          <a href="../en/skills.html">EN</a>
+        </div>
+        <a class="header-action" href="resume.html">查看简历</a>
+      </div>
     </header>
 
     <main id="main">
       <section class="page-hero">
         <div>
-          <p class="eyebrow">Skills</p>
+          <p class="eyebrow">专业技能</p>
           <h1>专业技能矩阵</h1>
           <p>
             技术栈围绕机器人感知、四足机器人强化学习、嵌入式控制、Linux 工程和 AI for Robotics 展开。
@@ -46,11 +52,11 @@
         <aside class="page-meta">
           <div>
             <span>Core Identity</span>
-            <strong>Mechanical Engineer with Robotics Software Stack</strong>
+            <strong>具备机器人软件栈能力的机械工程背景</strong>
           </div>
           <div>
             <span>Direction</span>
-            <strong>Full-stack engineer across mechanical, hardware and software</strong>
+            <strong>目标成为贯通机械、硬件和软件的全栈工程师</strong>
           </div>
         </aside>
       </section>
@@ -58,63 +64,63 @@
       <section class="section">
         <div class="skill-grid">
           <article class="skill-panel">
-            <h3>Robotics</h3>
+            <h3>机器人</h3>
             <p>关注机器人控制、感知、规划、强化学习和 Sim2Real。</p>
             <ul>
-              <li>Robot Control, Motion Planning, Robot Perception</li>
-              <li>LQR, MPC, PPO, Reinforcement Learning</li>
-              <li>MuJoCo, Isaac Lab, Quadruped RL</li>
-              <li>ROS2 Launch, TF, Odometry, Mapping</li>
+              <li>机器人控制、运动规划、机器人感知</li>
+              <li>LQR、MPC、PPO、强化学习</li>
+              <li>MuJoCo、Isaac Lab、四足机器人强化学习</li>
+              <li>ROS2 Launch、TF、里程计、建图</li>
             </ul>
           </article>
           <article class="skill-panel">
-            <h3>Quadruped Robot Reinforcement Learning</h3>
+            <h3>四足机器人强化学习</h3>
             <p>围绕四足机器人运动控制、仿真训练和策略迁移建立项目能力。</p>
             <ul>
-              <li>PPO, Reward Design, Policy Optimization</li>
-              <li>Quadruped Locomotion and Gait Learning</li>
-              <li>MuJoCo, Isaac Lab, Simulation Pipeline</li>
-              <li>Sim2Real Thinking and Deployment Awareness</li>
+              <li>PPO、奖励设计、策略优化</li>
+              <li>四足机器人运动控制与步态学习</li>
+              <li>MuJoCo、Isaac Lab、仿真训练流程</li>
+              <li>Sim2Real 思维与部署意识</li>
             </ul>
           </article>
           <article class="skill-panel">
-            <h3>Machine Vision and Perception</h3>
+            <h3>机器视觉与感知</h3>
             <p>具备 LiDAR、SLAM、点云和机器人可视化部署经验。</p>
             <ul>
-              <li>Livox MID360, FAST-LIO, FAST-LIO2</li>
-              <li>Point Cloud, PCL, ICP, IKD-Tree</li>
-              <li>RViz, ROS2, Mapping, Odometry</li>
-              <li>Sensor Driver, SDK Compile, Data Pipeline</li>
+              <li>Livox MID360、FAST-LIO、FAST-LIO2</li>
+              <li>点云、PCL、ICP、IKD-Tree</li>
+              <li>RViz、ROS2、建图、里程计</li>
+              <li>传感器驱动、SDK 编译、数据链路</li>
             </ul>
           </article>
           <article class="skill-panel">
-            <h3>Embedded Systems</h3>
+            <h3>嵌入式系统</h3>
             <p>从 MCU、外设、通信协议到固件配置均有接触。</p>
             <ul>
               <li>STM32H743, STM32H723, STM32G474</li>
-              <li>CubeMX, HAL, Keil</li>
-              <li>USB HS, ULPI, USB3320 PHY</li>
-              <li>CAN, FDCAN, SPI, Ethernet, Multi-MCU Communication</li>
+              <li>CubeMX、HAL、Keil</li>
+              <li>USB HS、ULPI、USB3320 PHY</li>
+              <li>CAN、FDCAN、SPI、Ethernet、多 MCU 通信</li>
             </ul>
           </article>
           <article class="skill-panel">
-            <h3>Linux Development</h3>
+            <h3>Linux 开发</h3>
             <p>能够独立搭建、调试和维护机器人软件开发环境。</p>
             <ul>
-              <li>Ubuntu, Docker, Git</li>
-              <li>CMake, Colcon, Workspace Management</li>
-              <li>Dependency Resolution, Driver Debugging</li>
-              <li>Source Build, SDK Integration</li>
+              <li>Ubuntu、Docker、Git</li>
+              <li>CMake、Colcon、工作空间管理</li>
+              <li>依赖处理、驱动调试</li>
+              <li>源码编译、SDK 集成</li>
             </ul>
           </article>
           <article class="skill-panel">
-            <h3>Programming and Tools</h3>
+            <h3>编程语言与工具</h3>
             <p>主要语言与工程配置能力覆盖算法、驱动和机器人工作流。</p>
             <ul>
-              <li>C++, C, Python, Shell</li>
-              <li>YAML, JSON, ROS2 Launch</li>
-              <li>MATLAB, Gazebo, RViz, MuJoCo</li>
-              <li>Git, Docker, CMake, Colcon</li>
+              <li>C++、C、Python、Shell</li>
+              <li>YAML、JSON、ROS2 Launch</li>
+              <li>MATLAB、Gazebo、RViz、MuJoCo</li>
+              <li>Git、Docker、CMake、Colcon</li>
             </ul>
           </article>
         </div>
@@ -123,7 +129,7 @@
       <section class="section section-contrast">
         <div class="section-header">
           <div>
-            <p class="eyebrow">Robot Software Stack</p>
+            <p class="eyebrow">机器人软件栈</p>
             <h2>完整跑通过一条机器人感知链路。</h2>
           </div>
           <p>
@@ -150,7 +156,7 @@
       <section class="section">
         <div class="section-header">
           <div>
-            <p class="eyebrow">Career Fit</p>
+            <p class="eyebrow">岗位适配</p>
             <h2>适配方向</h2>
           </div>
           <p>
@@ -160,17 +166,17 @@
         <div class="feature-grid three">
           <article class="feature-card">
             <span>A</span>
-            <h3>Robotics and Embodied AI</h3>
+            <h3>机器人与具身智能</h3>
             <p>机器人感知、控制、仿真、强化学习、Sim2Real 和具身智能系统。</p>
           </article>
           <article class="feature-card">
             <span>B</span>
-            <h3>Quadruped Robot Learning</h3>
+            <h3>四足机器人学习</h3>
             <p>四足机器人强化学习、PPO、仿真训练、奖励设计和 Sim2Real 迁移。</p>
           </article>
           <article class="feature-card">
             <span>C</span>
-            <h3>Embedded and System Integration</h3>
+            <h3>嵌入式与系统集成</h3>
             <p>工业控制板、传感器接入、通信协议、驱动调试和机器人系统集成。</p>
           </article>
         </div>
@@ -178,10 +184,10 @@
     </main>
 
     <footer class="site-footer">
-      <p>© <span data-year></span> 张同学. Built on GitHub Pages.</p>
+      <p>© <span data-year></span> 张同学。基于 GitHub Pages 构建。</p>
       <div>
         <a href="https://github.com/CofZhang">GitHub</a>
-        <a href="mailto:haozhez0812@gmail">Email</a>
+        <a href="mailto:haozhez0812@gmail">邮箱</a>
       </div>
     </footer>
     <script src="../assets/js/site.js"></script>

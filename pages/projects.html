@@ -11,13 +11,13 @@
     <link rel="stylesheet" href="../assets/css/site.css" />
   </head>
   <body data-page="projects">
-    <a class="skip-link" href="#main">Skip to content</a>
+    <a class="skip-link" href="#main">跳到正文</a>
     <header class="site-header">
       <a class="brand" href="../index.html" aria-label="张同学 home">
         <span class="brand-mark">张</span>
         <span>
           <strong>张同学</strong>
-          <small>Mechanical Engineer · Robotics</small>
+          <small>机械工程 · 机器人</small>
         </span>
       </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-label="打开导航" data-nav-toggle>
@@ -31,13 +31,19 @@
         <a href="resume.html" data-nav-id="resume">简历</a>
         <a href="contact.html" data-nav-id="contact">联系</a>
       </nav>
-      <a class="header-action" href="resume.html">查看简历</a>
+      <div class="header-tools">
+        <div class="language-switch" aria-label="语言切换">
+          <a class="is-active" href="projects.html">中文</a>
+          <a href="../en/projects.html">EN</a>
+        </div>
+        <a class="header-action" href="resume.html">查看简历</a>
+      </div>
     </header>
 
     <main id="main">
       <section class="page-hero">
         <div>
-          <p class="eyebrow">Projects</p>
+          <p class="eyebrow">项目经历</p>
           <h1>项目经历</h1>
           <p>
             这些项目覆盖机器人感知、四足机器人强化学习、嵌入式控制和机器人仿真，重点展示系统部署与工程整合能力。
@@ -45,12 +51,12 @@
         </div>
         <aside class="page-meta">
           <div>
-            <span>Repository</span>
+            <span>代码仓库</span>
             <strong><a href="https://github.com/CofZhang">github.com/CofZhang</a></strong>
           </div>
           <div>
-            <span>Focus</span>
-            <strong>Robotics, Quadruped RL, Embedded Control</strong>
+            <span>方向</span>
+            <strong>机器人、四足强化学习、嵌入式控制</strong>
           </div>
         </aside>
       </section>
@@ -59,7 +65,7 @@
         <div class="case-grid">
           <article class="case-study">
             <div>
-              <p class="project-type">Robotics Perception</p>
+              <p class="project-type">机器人感知</p>
               <h3>Livox MID360 + FAST-LIO2 部署</h3>
               <p>
                 完成从 LiDAR 设备、SDK、ROS2 驱动到 FAST-LIO2 建图的端到端部署，
@@ -78,7 +84,7 @@
           </article>
           <article class="case-study">
             <div>
-              <p class="project-type">Robot Learning</p>
+              <p class="project-type">机器人学习</p>
               <h3>四足机器人强化学习项目</h3>
               <p>
                 围绕四足机器人运动控制建立强化学习训练流程，关注 PPO、奖励设计、
@@ -97,7 +103,7 @@
           </article>
           <article class="case-study">
             <div>
-              <p class="project-type">Embedded Systems</p>
+              <p class="project-type">嵌入式系统</p>
               <h3>STM32 工业控制板</h3>
               <p>
                 围绕工业控制板进行外设配置、通信协议和多 MCU 协同开发，
@@ -116,14 +122,14 @@
           </article>
           <article class="case-study">
             <div>
-              <p class="project-type">Robot Simulation</p>
+              <p class="project-type">机器人仿真</p>
               <h3>MuJoCo 机器人仿真</h3>
               <p>
                 学习机器人仿真、物理引擎、插件系统和强化学习基础，
-                目标是将 Robot Learning 与真实机器人系统部署结合。
+                目标是将机器人学习与真实机器人系统部署结合。
               </p>
               <ul>
-                <li>Robot Simulation and Physics Engine</li>
+                <li>机器人仿真与物理引擎</li>
                 <li>Plugin, Model, Environment Setup</li>
                 <li>Sim2Real Thinking</li>
                 <li>Reinforcement Learning Pipeline</li>
@@ -135,17 +141,17 @@
           </article>
           <article class="case-study">
             <div>
-              <p class="project-type">Engineering Website</p>
+              <p class="project-type">工程化网站</p>
               <h3>个人品牌与简历官网</h3>
               <p>
                 使用 GitHub Pages 构建多页面个人官网，用于展示教育背景、技术栈、
                 项目经历、研究方向和联系方式。
               </p>
               <ul>
-                <li>Pure Static Website on GitHub Pages</li>
-                <li>Responsive Multi-page Information Architecture</li>
-                <li>Resume-oriented Content Design</li>
-                <li>SEO and Print-friendly Resume Page</li>
+                <li>基于 GitHub Pages 的纯静态网站</li>
+                <li>响应式多页面信息架构</li>
+                <li>面向简历展示的内容设计</li>
+                <li>SEO 与可打印简历页</li>
               </ul>
             </div>
             <ul class="tag-list">
@@ -154,21 +160,21 @@
           </article>
           <article class="case-study">
             <div>
-              <p class="project-type">Next Portfolio Target</p>
+              <p class="project-type">下一阶段目标</p>
               <h3>高质量开源工程项目</h3>
               <p>
                 下一阶段重点建设可公开复现的机器人学习和系统集成项目，
                 强化代码质量、系统设计、算法深度和英文技术表达。
               </p>
               <ul>
-                <li>State Estimation, SLAM, Motion Planning</li>
-                <li>Control and Reinforcement Learning</li>
-                <li>Perception, Planning, Control to Deployment</li>
-                <li>Technical Blog and Open-source Contribution</li>
+                <li>状态估计、SLAM、运动规划</li>
+                <li>控制与强化学习</li>
+                <li>从感知、规划、控制到部署</li>
+                <li>技术博客与开源贡献</li>
               </ul>
             </div>
             <ul class="tag-list">
-              <li>Open Source</li><li>Robotics</li><li>Systems</li>
+              <li>开源</li><li>机器人</li><li>系统</li>
             </ul>
           </article>
         </div>
@@ -187,10 +193,10 @@
     </main>
 
     <footer class="site-footer">
-      <p>© <span data-year></span> 张同学. Built on GitHub Pages.</p>
+      <p>© <span data-year></span> 张同学。基于 GitHub Pages 构建。</p>
       <div>
         <a href="https://github.com/CofZhang">GitHub</a>
-        <a href="mailto:haozhez0812@gmail">Email</a>
+        <a href="mailto:haozhez0812@gmail">邮箱</a>
       </div>
     </footer>
     <script src="../assets/js/site.js"></script>

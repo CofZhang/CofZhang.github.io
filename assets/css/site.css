@@ -157,6 +157,36 @@ h3 {
   outline: none;
 }
 
+.header-tools {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.language-switch {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--paper);
+  padding: 3px;
+}
+
+.language-switch a {
+  border-radius: 6px;
+  padding: 7px 9px;
+  color: var(--muted);
+  font-size: 0.86rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.language-switch a.is-active {
+  background: var(--teal);
+  color: #ffffff;
+}
+
 .header-action,
 .button,
 .text-link {
@@ -780,6 +810,11 @@ h4 {
 
   .header-action {
     display: none;
+  }
+
+  .header-tools {
+    grid-column: 1 / -1;
+    justify-content: flex-start;
   }
 
   .nav-toggle {
