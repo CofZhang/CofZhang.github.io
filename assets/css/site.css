@@ -992,19 +992,39 @@ h4 {
 }
 
 .timeline-item {
-  padding: 24px;
+  padding: 24px 24px 24px 28px;
+  border-color: rgba(7, 25, 29, 0.15);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.74), rgba(255, 255, 255, 0.34)),
+    var(--glass);
 }
 
-.timeline-kicker {
+.timeline-item::after {
+  top: 18px;
+  right: auto;
+  bottom: 18px;
+  left: 0;
+  width: 3px;
+  height: auto;
+  background: linear-gradient(180deg, var(--teal), var(--blue));
+  opacity: 0.92;
+}
+
+.timeline-item .timeline-kicker {
   margin-bottom: 10px;
+  color: #034f4a;
+  font-size: 0.82rem;
 }
 
 .timeline-item h3 {
   margin-bottom: 4px;
+  color: var(--ink);
 }
 
 .timeline-item p:last-child {
   margin-bottom: 0;
+  color: #30444d;
+  font-weight: 520;
 }
 
 .skill-grid {
