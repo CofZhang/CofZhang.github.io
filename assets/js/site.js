@@ -13,15 +13,25 @@ document.querySelectorAll("[data-nav-id]").forEach((link) => {
 });
 
 if (navToggle && siteNav) {
-  navToggle.addEventListener("click", () => {
-    const isOpen = siteNav.classList.toggle("is-open");
+  function setNavOpen(isOpen) {
+    siteNav.classList.toggle("is-open", isOpen);
+    document.body.classList.toggle("nav-open", isOpen);
     navToggle.setAttribute("aria-expanded", String(isOpen));
+  }
+
+  navToggle.addEventListener("click", () => {
+    setNavOpen(!siteNav.classList.contains("is-open"));
   });
 
   siteNav.addEventListener("click", (event) => {
     if (event.target.matches("a")) {
-      siteNav.classList.remove("is-open");
-      navToggle.setAttribute("aria-expanded", "false");
+      setNavOpen(false);
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      setNavOpen(false);
     }
   });
 }
